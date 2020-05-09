@@ -1,0 +1,21 @@
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import barcode
+>>> hr=barcode.get_barcode_class('ean13')
+>>> Hr=hr('1234567890132')
+>>> qr=Hr.save('123')
+>>> hr=barcode.get_barcode_class('code39')
+>>> from barcode.writer import ImageWritter
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: cannot import name 'ImageWritter' from 'barcode.writer' (C:\Users\Lokesh Kumar\Anaconda3\lib\site-packages\barcode\writer.py)
+>>> from barcode.writer import ImageWriter
+>>> hr=barcode.get_barcode_class('code39')
+>>> Hr=hr('1234567890132',writer=Imagewriter())
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Imagewriter' is not defined
+>>> Hr=hr('1234567890132',writer=ImageWriter())
+>>> qr=Hr.save('1234')
+>>> Hr=hr('abcdefdkhljaakn',writer=ImageWriter())
+>>> qr=Hr.save('sample')
+>>>                     
